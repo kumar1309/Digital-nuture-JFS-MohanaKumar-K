@@ -1,0 +1,202 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Navigation Styles */
+.main-nav {
+    background-color: #2c3e50;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #34495e;
+}
+
+/* Welcome Banner */
+.welcome-section {
+    background-color: #3498db;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.highlight {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Event Gallery */
+.event-gallery {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.event-gallery table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.event-gallery caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.event-figure {
+    margin: 0;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #3498db;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #34495e;
+    font-weight: 500;
+}
+
+/* Form Styles */
+.registration-section {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.cta-button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #27ae60;
+}
+
+/* Video Section */
+.video-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+#eventVideo {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+.video-message {
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .event-gallery table {
+        width: 100%;
+    }
+
+    .event-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .nav-link, .cta-button {
+        display: none;
+    }
+
+    .event-image {
+        width: 100%;
+        height: auto;
+    }
+}
