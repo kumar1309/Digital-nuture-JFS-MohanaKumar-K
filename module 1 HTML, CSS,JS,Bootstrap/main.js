@@ -19,6 +19,9 @@ const clearPreferencesBtn = document.getElementById('clearPreferences');
 // Initialize page
 window.addEventListener('load', () => {
     console.log('Welcome to the Community Portal');
+        if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname);
+    }
     loadUserPreferences();
     setupImageGallery();
     setupEventHandlers();
@@ -83,6 +86,7 @@ async function handleRegistration(e) {
         
         // Reset form
         registrationForm.reset();
+        
         
     } catch (error) {
         console.error('Registration error:', error);
@@ -205,4 +209,11 @@ console.log('Available features:', {
     geolocation: !!navigator.geolocation,
     localStorage: typeof localStorage !== 'undefined',
     sessionStorage: typeof sessionStorage !== 'undefined'
+});
+
+window.addEventListener('beforeunload', function () {
+    window.scrollTo(0, 0);
+});
+window.addEventListener('load', function () {
+    window.scrollTo(0, 0);
 });
