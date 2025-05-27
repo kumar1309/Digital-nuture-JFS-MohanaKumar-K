@@ -29,7 +29,7 @@ public class StudentDAO {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/testdb";
         String user = "root";
-        String password = "Kumar@1309";
+        String password = "#";
 
         try {
             // Load driver (optional for recent MySQL drivers, but safe to keep)
