@@ -3,7 +3,7 @@ import java.sql.*;
 public class TransactionExample {
     private static final String URL = "jdbc:mysql://localhost:3306/testdb";
     private static final String USER = "root";
-    private static final String PASS = "Kumar@1309";
+    private static final String PASS = "#";
 
     public void transferMoney(int fromAcc, int toAcc, double amount) {
         String debit = "UPDATE accounts SET balance = balance - ? WHERE acc_id = ?";
